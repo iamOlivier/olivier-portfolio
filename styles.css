@@ -1,0 +1,262 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*My code*/
+
+/*Declaring some variables*/
+:root {
+  --grey-bgd: #F3F3F3;
+  --grey-text: #494949;
+  --black-bgd: #322E2E;
+  --red-hover: #D40909;
+}
+
+* {
+  text-decoration: none;
+}
+
+/*Styling for header
+Notice the inline-flex
+Flexbox contents: header-brand and nav*/
+header {
+  background-color: #FFF;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  right 0;
+  z-index: 999;
+}
+
+/*Styling OLIVIER*/
+.header-brand {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  color: var(--grey-text);
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin: 10px 32%;
+}
+
+header nav ul {
+  margin: 20px;
+  text-align: center;
+}
+
+header nav ul li {
+  display: inline;
+  list-style: none;
+  padding: 5px;
+  text-align: center;
+}
+
+header nav ul li a {
+  font-family: 'Roboto', sans-serif;
+  color: var(--grey-text);
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  color: var(--red-hover);
+}
+
+main {
+  margin-top: 100px;
+}
+
+main a {
+  display: inline-block;
+  width: 100%;
+  height: 25%;
+  position: relative;
+}
+
+main a h2 {
+  font-family: Catamaran;
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  text-align: center;
+  font-size: 24px;
+  color: #FFF;
+  z-index: 2
+  transition: .05s ease-in-out
+}
+
+main a img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: .05s ease-in-out;
+}
+
+main a:hover img {
+  filter: blur(2px);
+}
+
+main a:hover h2 {
+  font-size: 25px;
+}
+
+/*Styling footer*/
+
+footer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+footer section {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 30px 0;
+}
+
+footer section a {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--grey-text);
+}
+
+footer section h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: var(--grey-text);
+}
+
+.footer-projects a {
+  width: 35px;
+  font-size: 12px;
+}
+
+.footer-icons {
+  position: relative;
+}
+
+.footer-icons a {
+  transition: 0.3s ease-in-out;
+}
+
+.footer-icons a img {
+  width: 15px;
+  height: 15px;
+}
+
+.footer-icons a p {
+  position: absolute;
+  color: var(--red-hover);
+  right: 20px;
+  display: none;
+}
+
+.footer-icons a:hover p {
+  display: block;
+}
+
+footer section a:hover {
+  color: var(--red-hover);
+}
