@@ -5,7 +5,6 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -18,91 +17,90 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 body {
-    line-height:1;
+  line-height: 1;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 nav ul {
-    list-style:none;
+  list-style: none;
 }
 
 blockquote, q {
-    quotes:none;
+  quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content:'';
-    content:none;
+  content: '';
+  content: none;
 }
 
 a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 /* change colours to suit your needs */
 ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
 }
 
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 table {
-    border-collapse:collapse;
-    border-spacing:0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* change border colour to suit your needs */
 hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 input, select {
-    vertical-align:middle;
+  vertical-align: middle;
 }
 
 /*My code*/
-
 /*Declaring some variables*/
 :root {
   --grey-bgd: #F3F3F3;
@@ -128,7 +126,11 @@ header {
   z-index: 999;
 }
 
-/*Styling OLIVIER*/
+.sidebar {
+  display: none;
+}
+
+/*Styling OLIVIER'S DEN*/
 .header-brand {
   display: block;
   font-family: 'Roboto', sans-serif;
@@ -136,11 +138,16 @@ header {
   font-size: 28px;
   font-weight: 700;
   text-align: center;
-  margin: 10px 32%;
+  width: 200px;
+  margin: 10px auto;
+}
+
+.header-welcome {
+  display: none;
 }
 
 header nav ul {
-  margin: 20px;
+  margin: 20px 0;
   text-align: center;
 }
 
@@ -149,6 +156,22 @@ header nav ul li {
   list-style: none;
   padding: 5px;
   text-align: center;
+}
+
+.li-about {
+  border-left: 1px solid var(--grey-text);
+  border-right: 1px solid var(--grey-text);
+  padding: 5px 8px;
+}
+
+@media only screen and (min-width: 375px) {
+  header nav ul li {
+    padding: 15px;
+  }
+
+  .li-about {
+    padding: 10px 25px;
+  }
 }
 
 header nav ul li a {
@@ -161,46 +184,86 @@ header nav ul li a:hover {
   color: var(--red-hover);
 }
 
-main {
-  margin-top: 100px;
+.banner {
+  display: none;
 }
 
-main a {
-  display: inline-block;
-  width: 100%;
-  height: 25%;
+main {
+  padding-top: 110px;
+  background-color: #E8E8E8;
+}
+
+.wrapper {
+  padding-bottom: 20px;
+}
+
+.wrapper a {
+  display: block;
+  width: 95%;
+  height: 20%;
+  margin: 10px auto;
   position: relative;
 }
 
-main a h2 {
+.wrapper a h2 {
   font-family: Catamaran;
   position: absolute;
   width: 100%;
   top: 35%;
   text-align: center;
   font-size: 24px;
+  text-shadow: 2px 2px 7px #000;
   color: #FFF;
-  z-index: 2
-  transition: .05s ease-in-out
+  z-index: 2;
+  transition: 0.4s step-start;
 }
 
-main a img {
+.wrapper a img {
+  position: relative;
   width: 100%;
   height: 100%;
   z-index: 1;
   transition: .05s ease-in-out;
 }
 
-main a:hover img {
+.wrapper a:hover img {
   filter: blur(2px);
 }
 
-main a:hover h2 {
+.wrapper a:hover h2 {
   font-size: 25px;
 }
 
-/*Styling footer*/
+.skills-icons {
+  background-color: #707070;
+  width: 100%;
+  height: 200px;
+  margin auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  background-image: url("img/texture.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
+.skills-icons::before {
+  content: "MY LATEST SKILLS";
+  width: 100%;
+  font-family: Catamaran;
+  text-align: center;
+  color: #FFF;
+  text-shadow: 2px 2px 8px #000;
+}
+
+.skills-icons img {
+  width: 50px;
+  height: 50px;
+}
+
+/*Styling footer*/
 footer {
   width: 100%;
   height: 200px;
@@ -242,15 +305,17 @@ footer section h2 {
 }
 
 .footer-icons a img {
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
 }
 
 .footer-icons a p {
   position: absolute;
-  color: var(--red-hover);
-  right: 20px;
+  color: var(--black-bgd);
+  font-weight: 700;
+  right: 25px;
   display: none;
+  padding-top: 2px;
 }
 
 .footer-icons a:hover p {
@@ -259,4 +324,120 @@ footer section h2 {
 
 footer section a:hover {
   color: var(--red-hover);
+}
+
+@media only screen and (min-width: 700px) {
+  header nav ul li {
+    padding: 0 50px;
+  }
+
+  .li-about {
+    border-style: none;
+  }
+
+  .wrapper a {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+  .sidebar {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("img/sidebar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 30px;
+  }
+
+  /*Styling OLIVIER'S DEN*/
+  .header-brand {
+    display: inline-block;
+    margin-left: 75px;
+    margin-top: 30px;
+    height: 35px;
+    border-right: 2px solid var(--grey-text);
+    padding-top: 5px;
+    padding-right: 30px;
+  }
+
+  .header-welcome {
+    display: inline;
+    font-family: 'Pacifico', cursive;
+    color: var(--grey-text);
+    margin-left: 50px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .banner {
+    display: block;
+    background-image: url("img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 650px;
+  }
+
+  .banner h2 {
+    padding: 200px 0;
+    margin: auto;
+    font-family: monospace;
+    font-size: 50px;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  main {
+    background-color: #FFF;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    transition: 0.3s ease-in;
+  }
+
+  .wrapper a {
+    width: 45%;
+    height: 380px;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .wrapper:hover {
+    /*background-color: #FFEAD4;*/
+    background-color: #E8E8E8;
+  }
+
+  footer {
+    transition: 0.8s ease-in;
+  }
+
+  footer:hover {
+    background-color: var(--grey-bgd);
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .wrapper {
+    height: 1000px;
+  }
+
+  .wrapper a {
+    width: 35%;
+    height: 480px;
+  }
 }
