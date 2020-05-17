@@ -139,6 +139,10 @@ header {
   cursor: pointer;
 }
 
+.menu-btn:hover {
+  opacity: 0.7;
+}
+
 /*Styling OLIVIER'S DEN*/
 .header-brand {
   display: inline-block;
@@ -230,7 +234,7 @@ header nav ul li a:hover {
 }
 
 .open-menubar section a:hover {
-  border: 1px solid #203aff;
+  border-color: #203aff;
 }
 
 .banner {
