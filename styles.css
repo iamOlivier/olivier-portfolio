@@ -223,7 +223,7 @@ header nav ul li a:hover {
   color: #FFF;
   margin: 10px;
   padding: 10px 0;
-  width: 5em;
+  width: 10em;
   border: 1px solid #15ff67;
   border-radius: 20px;
   transition: border 0.5s ease-out, visibility 0.15s ease-in;
@@ -341,7 +341,7 @@ footer section h2 {
 }
 
 .footer-projects a {
-  width: 35px;
+  width: 10em;
   font-size: 12px;
 }
 
